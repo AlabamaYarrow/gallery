@@ -1,0 +1,8 @@
+extends layout
+block content
+    p No news
+    - if (loggedIn)  {
+        div
+            textarea
+        a.btn.btn-default(href='#', role='button') Post
+    - }

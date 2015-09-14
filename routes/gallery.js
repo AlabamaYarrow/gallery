@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET gallery page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { name: 'Pablo Picasso' });
+
+
+    res.render('gallery', {
+        images : ['1','2']
+    });
 });
 
 module.exports = router;

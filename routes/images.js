@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { name: 'Pablo Picasso' });
+    res.sendFile(path.resolve('./uploads/1'));
 });
 
 module.exports = router;

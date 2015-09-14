@@ -1,7 +1,41 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title="Pablo Picasso Official Website"
+        meta(charset='utf-8')
+        link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='public/stylesheets/style.css')
+    body
+    .container
+        .header.clearfix
+        nav.navbar-default.navbar-fixed-top
+            ul.nav.nav-pills.pull-right
+                - if(loggedIn) {
+                    p Logged In
+                - } else {
+                    p Logged Out
+                - }
+                li(role='presentation')
+                    a(href='/') Home
+                li(role='presentation')
+                    a(href='/news') News
+                li(role='presentation')
+                    a(href='/gallery') Gallery
+                li(role='presentation')
+                    a(href='/about') About
+                li(role='presentation')
+                    a(href='/contact') Contact
+        h3.text-muted Pablo Picasso, the greatest
+        .jumbotron#bs-override
+            block content
+        footer.footer
+            - if (!loggedIn) {
+                a(href='/auth') LOGIN
+            - }
+            - else {
+                a(href='/logout') LOGOUT
+            - }
+            p.footer__text © Ivan Dunin 2015
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    script(src="../node_modules/bootstrap/dist/js/bootstrap.min.js")
+

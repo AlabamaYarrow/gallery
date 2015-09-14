@@ -1,0 +1,20 @@
+//
+   Created by ivan on 21.08.15.
+extends layout
+
+block content
+    p Welcome to gallery
+    - if (loggedIn)  {
+        .form-group
+            form(action="/upload", method="post", enctype="multipart/form-data")
+                label.btn.btn-default(for='uploadform_input')
+                    input#uploadform_input(type='file', name='displayImage' style='display:none;')
+                    |     Browse
+                button.btn.btn-default(type="submit", value="Upload") Upload File
+    - }
+    each val in images
+        img.gallery__image(src='/images/' + val)
+
+
+
+

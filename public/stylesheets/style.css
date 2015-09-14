@@ -1,8 +1,33 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", sans-serif;
+    background-color: #E1E0F5;
 }
 
 a {
-  color: #00B7FF;
+    color: #e5e5e5;
+}
+
+.navbar-default {
+    background-color: #0b97c4;
+}
+
+.container .jumbotron {
+    background-color: #F8F8F8;
+    border-radius: 2px;
+    box-shadow: 0 0 15px #999999;
+    padding: 20px;
+}
+
+.footer__text {
+    float: right;
+}
+
+.loginform {
+    margin: 0 auto;
+    width: 30%;
+}
+
+.gallery__image {
+    height: 100px;
 }
